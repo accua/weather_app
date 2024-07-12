@@ -1,0 +1,94 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://nominatim.openstreetmap.org/search?accept-language=en&addressdetails=1&format=json&q=1233%20Main%20St%20Portland,%20OR%2097214
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Jul 2024 22:50:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1395'
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=20
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sicGxhY2VfaWQiOjMxMzUxODY3NSwibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwOi8vb3NtLm9yZy9jb3B5cmlnaHQiLCJvc21fdHlwZSI6IndheSIsIm9zbV9pZCI6NTUzMjk4MSwibGF0IjoiNDUuNTA2MTEzOCIsImxvbiI6Ii0xMjIuNDkwNTMyNyIsImNsYXNzIjoiaGlnaHdheSIsInR5cGUiOiJzZXJ2aWNlIiwicGxhY2VfcmFuayI6MjcsImltcG9ydGFuY2UiOjAuMDQwMDc1MzU3NDQyNTg3OTIsImFkZHJlc3N0eXBlIjoicm9hZCIsIm5hbWUiOiJNYWluIFN0cmVldCIsImRpc3BsYXlfbmFtZSI6Ik1haW4gU3RyZWV0LCBDZW50ZW5uaWFsLCBQb3J0bGFuZCwgTXVsdG5vbWFoIENvdW50eSwgT3JlZ29uLCA5NzIzMywgVW5pdGVkIFN0YXRlcyIsImFkZHJlc3MiOnsicm9hZCI6Ik1haW4gU3RyZWV0Iiwic3VidXJiIjoiQ2VudGVubmlhbCIsImNpdHkiOiJQb3J0bGFuZCIsImNvdW50eSI6Ik11bHRub21haCBDb3VudHkiLCJzdGF0ZSI6Ik9yZWdvbiIsIklTTzMxNjYtMi1sdmw0IjoiVVMtT1IiLCJwb3N0Y29kZSI6Ijk3MjMzIiwiY291bnRyeSI6IlVuaXRlZCBTdGF0ZXMiLCJjb3VudHJ5X2NvZGUiOiJ1cyJ9LCJib3VuZGluZ2JveCI6WyI0NS41MDQ1ODA4IiwiNDUuNTA4MDg0NiIsIi0xMjIuNDkwNTM2NSIsIi0xMjIuNDkwMzQwMyJdfSx7InBsYWNlX2lkIjozMTQxNzk1NTYsImxpY2VuY2UiOiJEYXRhIMKpIE9wZW5TdHJlZXRNYXAgY29udHJpYnV0b3JzLCBPRGJMIDEuMC4gaHR0cDovL29zbS5vcmcvY29weXJpZ2h0Iiwib3NtX3R5cGUiOiJ3YXkiLCJvc21faWQiOjEzNTQ3NTk3OCwibGF0IjoiNDUuNDgxMjg2IiwibG9uIjoiLTEyMi41Njg2MTIyIiwiY2xhc3MiOiJoaWdod2F5IiwidHlwZSI6InNlY29uZGFyeSIsInBsYWNlX3JhbmsiOjI2LCJpbXBvcnRhbmNlIjowLjA1MzQwODY5MDc3NTkyMTIyNSwiYWRkcmVzc3R5cGUiOiJyb2FkIiwibmFtZSI6IlNvdXRoZWFzdCA5Mm5kIEF2ZW51ZSIsImRpc3BsYXlfbmFtZSI6IlNvdXRoZWFzdCA5Mm5kIEF2ZW51ZSwgTGVudHMsIFBvcnRsYW5kLCBNdWx0bm9tYWggQ291bnR5LCBPcmVnb24sIDk3MjY2LCBVbml0ZWQgU3RhdGVzIiwiYWRkcmVzcyI6eyJyb2FkIjoiU291dGhlYXN0IDkybmQgQXZlbnVlIiwic3VidXJiIjoiTGVudHMiLCJjaXR5IjoiUG9ydGxhbmQiLCJjb3VudHkiOiJNdWx0bm9tYWggQ291bnR5Iiwic3RhdGUiOiJPcmVnb24iLCJJU08zMTY2LTItbHZsNCI6IlVTLU9SIiwicG9zdGNvZGUiOiI5NzI2NiIsImNvdW50cnkiOiJVbml0ZWQgU3RhdGVzIiwiY291bnRyeV9jb2RlIjoidXMifSwiYm91bmRpbmdib3giOlsiNDUuNDgwMzUxMyIsIjQ1LjQ4MjIxNzkiLCItMTIyLjU2ODYxNzMiLCItMTIyLjU2ODYxMTQiXX1d
+  recorded_at: Thu, 11 Jul 2024 22:50:09 GMT
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/3.0/onecall?appid=<API_KEY>&exclude=hourly,minutely&lat=45.5061138&lon=-122.4905327&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Thu, 11 Jul 2024 22:50:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '4631'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/3.0/onecall?exclude=hourly%2Cminutely&lat=45.51&lon=-122.49&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"lat":45.5061,"lon":-122.4905,"timezone":"America/Los_Angeles","timezone_offset":-25200,"current":{"dt":1720738209,"sunrise":1720701154,"sunset":1720756686,"temp":83.86,"feels_like":83.98,"pressure":1015,"humidity":45,"dew_point":60.26,"uvi":4.89,"clouds":0,"visibility":10000,"wind_speed":11.5,"wind_deg":320,"wind_gust":19.57,"weather":[{"id":711,"main":"Smoke","description":"smoke","icon":"50d"}]},"daily":[{"dt":1720728000,"sunrise":1720701154,"sunset":1720756686,"moonrise":1720722480,"moonset":1720767300,"moon_phase":0.19,"summary":"There
+        will be clear sky today","temp":{"day":82.27,"min":56.26,"max":84.43,"night":61.48,"eve":81.82,"morn":58.73},"feels_like":{"day":81.34,"night":59.97,"eve":80.89,"morn":58.15},"pressure":1017,"humidity":37,"dew_point":53.42,"wind_speed":11.34,"wind_deg":323,"wind_gust":20.07,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":8.22},{"dt":1720814400,"sunrise":1720787606,"sunset":1720843049,"moonrise":1720812660,"moonset":0,"moon_phase":0.22,"summary":"There
+        will be clear sky today","temp":{"day":80.11,"min":51.96,"max":87.82,"night":64.56,"eve":83.37,"morn":55.08},"feels_like":{"day":79.47,"night":63.54,"eve":81.7,"morn":53.91},"pressure":1017,"humidity":33,"dew_point":48.4,"wind_speed":9.13,"wind_deg":339,"wind_gust":18.61,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":8.16},{"dt":1720900800,"sunrise":1720874059,"sunset":1720929409,"moonrise":1720902900,"moonset":1720854600,"moon_phase":0.25,"summary":"There
+        will be clear sky today","temp":{"day":83.62,"min":54.73,"max":90.95,"night":65.5,"eve":85.24,"morn":57.79},"feels_like":{"day":81.81,"night":64.42,"eve":83.19,"morn":56.95},"pressure":1016,"humidity":31,"dew_point":49.57,"wind_speed":10,"wind_deg":334,"wind_gust":19.42,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":8.62},{"dt":1720987200,"sunrise":1720960514,"sunset":1721015768,"moonrise":1720993260,"moonset":1720941960,"moon_phase":0.28,"summary":"There
+        will be clear sky today","temp":{"day":83.44,"min":54.86,"max":90.05,"night":63.95,"eve":77.86,"morn":57.43},"feels_like":{"day":81.46,"night":62.87,"eve":77,"morn":56.64},"pressure":1016,"humidity":29,"dew_point":47.43,"wind_speed":10.4,"wind_deg":337,"wind_gust":17.87,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":8.9},{"dt":1721073600,"sunrise":1721046970,"sunset":1721102124,"moonrise":1721083800,"moonset":1721029500,"moon_phase":0.31,"summary":"There
+        will be clear sky today","temp":{"day":83.35,"min":54.28,"max":85.68,"night":64.09,"eve":75.81,"morn":60.3},"feels_like":{"day":81.39,"night":63.12,"eve":74.97,"morn":59.36},"pressure":1017,"humidity":29,"dew_point":48.15,"wind_speed":9.53,"wind_deg":333,"wind_gust":16.37,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":8.86},{"dt":1721160000,"sunrise":1721133427,"sunset":1721188478,"moonrise":1721174460,"moonset":1721117280,"moon_phase":0.34,"summary":"There
+        will be clear sky today","temp":{"day":85.55,"min":55.89,"max":88.93,"night":68.99,"eve":82.04,"morn":62.55},"feels_like":{"day":83.61,"night":68.79,"eve":81.61,"morn":61.84},"pressure":1016,"humidity":32,"dew_point":52.43,"wind_speed":7.74,"wind_deg":335,"wind_gust":16.26,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":9},{"dt":1721246400,"sunrise":1721219886,"sunset":1721274829,"moonrise":1721265120,"moonset":1721205480,"moon_phase":0.37,"summary":"You
+        can expect clear sky in the morning, with partly cloudy in the afternoon","temp":{"day":91.24,"min":59.81,"max":94.21,"night":75.29,"eve":85.15,"morn":66.06},"feels_like":{"day":88.7,"night":75.25,"eve":83.97,"morn":65.89},"pressure":1013,"humidity":27,"dew_point":52.97,"wind_speed":8.77,"wind_deg":324,"wind_gust":15.46,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":2,"pop":0,"uvi":9},{"dt":1721332800,"sunrise":1721306345,"sunset":1721361179,"moonrise":1721355540,"moonset":1721294160,"moon_phase":0.41,"summary":"You
+        can expect partly cloudy in the morning, with clearing in the afternoon","temp":{"day":91.22,"min":63.77,"max":93.92,"night":70.66,"eve":83.34,"morn":69.08},"feels_like":{"day":89.64,"night":70.2,"eve":82.24,"morn":68.79},"pressure":1014,"humidity":31,"dew_point":56.61,"wind_speed":11.88,"wind_deg":328,"wind_gust":18.75,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"clouds":100,"pop":0,"uvi":9}]}'
+  recorded_at: Thu, 11 Jul 2024 22:50:09 GMT
+recorded_with: VCR 6.2.0

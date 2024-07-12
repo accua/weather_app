@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/3.0/onecall?appid=<API_KEY>&exclude=hourly,minutely&lat=45.523&lon=-122.6764&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Thu, 11 Jul 2024 23:35:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '338'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/3.0/onecall?exclude=hourly%2Cminutely&lat=45.52&lon=-122.68&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"cod":401, "message": "Please note that using One Call 3.0 requires
+        a separate subscription to the One Call by Call plan. Learn more here https://openweathermap.org/price.
+        If you have a valid subscription to the One Call by Call plan, but still receive
+        this error, then please see https://openweathermap.org/faq#error401 for more
+        info."}'
+  recorded_at: Thu, 11 Jul 2024 23:35:38 GMT
+recorded_with: VCR 6.2.0

@@ -1,0 +1,44 @@
+<div class="bg-white shadow-lg rounded-lg p-6">
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-xl font-bold text-gray-800">Weather for <%= @address %></h2>
+    <% if @cache_hit %>
+      <span class="flex items-center space-x-2 text-sm text-gray-500">
+        <i class="fas fa-solid fa-circle filter drop-shadow-[0_0_3px_rgba(74,222,128,0.8)] text-green-400"></i>
+        <span>Cached</span>
+      </span>
+    <% end %>
+  </div>
+
+  <% if @weather %>
+    <div class="mb-6">
+      <div class="flex flex-col items-center">
+        <div class="flex items-center justify-center w-full">
+          <%= weather_icon(@weather['current']['weather'][0]['icon'], 'w-16 h-16 text-6xl text-blue-500') %>
+          <div class="ml-4">
+            <div class="text-4xl font-bold text-gray-800"><%= @weather['current']['temp'].round %>°F</div>
+            <div class="text-gray-600"><%= @weather['current']['weather'][0]['description'].capitalize %></div>
+          </div>
+        </div>
+        <div class="mt-2 text-sm text-gray-600">
+          H: <%= @weather['daily'][0]['temp']['max'].round %>°F
+          L: <%= @weather['daily'][0]['temp']['min'].round %>°F
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t pt-4">
+      <h3 class="text-lg font-semibold text-gray-800 mb-2">3-Day Forecast</h3>
+      <div class="grid grid-cols-3 gap-4">
+        <% @weather['daily'][1..3].each do |day| %>
+          <div class="text-center">
+            <div class="text-sm text-gray-600"><%= Time.at(day['dt']).strftime('%a') %></div>
+            <%= weather_icon(day['weather'][0]['icon'], 'w-8 h-8 mx-auto text-blue-500') %>
+            <div class="text-sm font-semibold text-gray-800"><%= day['temp']['day'].round %>°F</div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% else %>
+    <p class="text-red-500">No weather data available.</p>
+  <% end %>
+</div>
