@@ -32,6 +32,14 @@ gem 'redis', '>= 4.0.1'
 # Http Client
 gem 'httparty'
 
+# GeoCoder for retrieving location data
+gem 'geocoder'
+
+# Use Active Storage variant
+# gem 'mini_magick', '>= 4.11.0'
+
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible [
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -44,10 +52,22 @@ gem 'tzinfo-data', platforms: %i[windows jruby]
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
+# Use tailwind for styling
+gem 'tailwindcss-rails'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
+  # Environment variable management
+  gem 'dotenv-rails'
+
+  # Debugger
+  gem 'pry-rails'
+
+  # Use RSpec for testing
+  gem 'rspec-rails'
+
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri windows]
 end
@@ -67,4 +87,7 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
+  gem 'vcr'
+  gem 'webmock'
 end
