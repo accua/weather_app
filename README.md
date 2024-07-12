@@ -1,24 +1,60 @@
-# README
+# Weather Forecast Sample Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
 
-Things you may want to cover:
+This Rails application provides users with current weather conditions and a 3-day forecast for a given address. It integrates with the OpenWeatherMap API and Geocoder to fetch real-time weather data.
 
-* Ruby version
+## Features
 
-* System dependencies
+- Address-based weather lookup
+- Current weather conditions display
+- 3-day weather forecast
+- Caching mechanism to reduce API calls
+- Responsive design using Tailwind CSS
+- Hotwire for a modern rails interactive experience
 
-* Configuration
+## Prerequisites
 
-* Database creation
+- Ruby 3.1.0 or higher
+- Rails 7.0.0 or higher
+- PostgreSQL
 
-* Database initialization
+## Installation
 
-* How to run the test suite
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/accua/weather_app.git
+   cd weather_app
+   ```
+   
+2. Install Dependencies
+   ```bash
+   bundle install
+   ```
 
-* Services (job queues, cache servers, search engines, etc.)
+3. Setup the Database
+   ```bash
+   rails db:setup
+   ```
 
-* Deployment instructions
+4. Create a .env file in the app root and add your OpenWeatherMap API key:
+   ```ruby
+   OPEN_WEATHER_MAP_API_KEY=your_api_key_here
+   ```
 
-* ...
+5. Start Rails server
+   ```bash
+   rails s
+   ```
+
+6. Navigate to `localhost:3000` in the browser
+
+## Running Specs
+
+```bash
+bundle exec rspec
+```
+
+## OpenWeatherMap API Integration
+This application integrates with the [OpenWeatherMap](https://openweathermap.org/) API. You'll need to sign up for a free API key to use this application.
+  
