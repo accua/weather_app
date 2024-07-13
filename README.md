@@ -15,7 +15,7 @@ This Rails application provides users with current weather conditions and a 3-da
 
 ## Prerequisites
 
-- Ruby 3.1.0 or higher
+- Ruby 3.3.0 or higher
 - Rails 7.0.0 or higher
 - PostgreSQL
 
